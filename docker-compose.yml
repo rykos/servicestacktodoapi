@@ -1,0 +1,15 @@
+version: '3'
+services:
+    postgres:
+        image: postgres:14.2
+        environment:
+            POSTGRES_DB: todoapidatabase
+            POSTGRES_USER: docker
+            POSTGRES_PASSWORD: docker
+    api:
+        build: .
+        depends_on:
+            - postgres
+        ports:
+            - "5001:5001"
+            - "5000:5000"

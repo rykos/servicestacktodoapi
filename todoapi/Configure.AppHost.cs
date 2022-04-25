@@ -36,9 +36,7 @@ public class AppHost : AppHostBase, IHostingStartup
                 ConfigureDatabase.Configure(db);
             }
         }
-
-        Plugins.Add(new ValidationFeature());
-
+        
         // Configure ServiceStack only IOC, Config & Plugins
         SetConfig(new HostConfig
         {
