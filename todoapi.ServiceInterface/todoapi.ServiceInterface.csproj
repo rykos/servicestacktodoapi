@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ServiceStack" Version="6.*" />
+    <PackageReference Include="ServiceStack.Interfaces" Version="6.*" />
+    <PackageReference Include="ServiceStack.OrmLite" Version="6.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\todoapi.ServiceModel\todoapi.ServiceModel.csproj" />
+  </ItemGroup>
+
+</Project>

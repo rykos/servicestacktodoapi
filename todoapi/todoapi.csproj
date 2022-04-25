@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Using Include="todoapi" />
+    <Using Include="ServiceStack" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ServiceStack" Version="6.*" />
+    <PackageReference Include="ServiceStack.OrmLite.PostgreSQL" Version="6.*" />
+    <PackageReference Include="ServiceStack.OrmLite.Sqlite" Version="6.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\todoapi.ServiceInterface\todoapi.ServiceInterface.csproj" />
+    <ProjectReference Include="..\todoapi.ServiceModel\todoapi.ServiceModel.csproj" />
+  </ItemGroup>
+
+</Project>
